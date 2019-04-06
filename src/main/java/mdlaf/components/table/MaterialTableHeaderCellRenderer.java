@@ -1,11 +1,8 @@
 package mdlaf.components.table;
 
-import javax.swing.JComponent;
-import javax.swing.JTable;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
-import java.awt.Component;
+import java.awt.*;
 
 public class MaterialTableHeaderCellRenderer extends DefaultTableCellRenderer {
 

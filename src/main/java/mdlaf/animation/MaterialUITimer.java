@@ -24,7 +24,7 @@
 package mdlaf.animation;
 
 import javax.swing.*;
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.*;
 
 public class MaterialUITimer implements MouseListener, ActionListener, MouseMotionListener {

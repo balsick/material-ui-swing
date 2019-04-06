@@ -2,11 +2,11 @@ package mdlaf.components.table;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicTableHeaderUI;
 import javax.swing.table.JTableHeader;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MaterialTableHeaderUI extends BasicTableHeaderUI {
 

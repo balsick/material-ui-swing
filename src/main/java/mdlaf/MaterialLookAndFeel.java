@@ -36,12 +36,9 @@ import mdlaf.utils.MaterialColors;
 import mdlaf.utils.MaterialFonts;
 import mdlaf.utils.MaterialImages;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.UIDefaults;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
-import java.awt.Color;
+import java.awt.*;
 
 public class MaterialLookAndFeel extends MetalLookAndFeel {
 
@@ -141,6 +138,12 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 	}
 
 	@Override
+	protected void initSystemColorDefaults(UIDefaults table) {
+		super.initSystemColorDefaults(table);
+		initComponentDefaults(table);
+	}
+
+	@Override
 	protected void initComponentDefaults (UIDefaults table) {
 		super.initComponentDefaults (table);
 
@@ -157,7 +160,7 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put ("CheckBox.background", Color.WHITE);
 		table.put ("CheckBox.foreground", Color.BLACK);
 		table.put ("CheckBox.icon", new ImageIcon (MaterialImages.UNCHECKED_BOX));
-		table.put ("CheckBox.selectedIcon", new ImageIcon (MaterialImages.PAINTED_CHECKED_BOX));
+		table.put("CheckBox.selectedIcon", new ImageIcon(MaterialImages.CHECKED_BOX));
 		table.put ("ComboBox.font", MaterialFonts.REGULAR);
 		table.put ("ComboBox.background", Color.WHITE);
 		table.put ("ComboBox.foreground", Color.BLACK);
@@ -320,7 +323,7 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put ("CheckBoxMenuItem.selectionForeground", Color.BLACK);
 		table.put ("CheckBoxMenuItem.border", BorderFactory.createEmptyBorder (5, 5, 5, 5));
 		table.put ("CheckBoxMenuItem.checkIcon", new ImageIcon (MaterialImages.UNCHECKED_BOX));
-		table.put ("CheckBoxMenuItem.selectedCheckIcon", new ImageIcon (MaterialImages.PAINTED_CHECKED_BOX));
+		table.put("CheckBoxMenuItem.selectedCheckIcon", new ImageIcon(MaterialImages.CHECKED_BOX));
 
 		table.put ("TextPane.border", MaterialBorders.LIGHT_LINE_BORDER);
 		table.put ("TextPane.background", MaterialColors.GRAY_50);
@@ -356,8 +359,8 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put("TaskPane.borderColor", MaterialColors.LIGHT_BLUE_500);
 		table.put("TaskPane.border", MaterialBorders.DEFAULT_SHADOW_BORDER);
 		table.put("TaskPane.contentBackground", MaterialColors.GRAY_50);
-		table.put("TaskPane.yesCollassed", new ImageIcon(MaterialImages.YES_COLLASSED));
-		table.put("TaskPane.noCollassed", new ImageIcon(MaterialImages.NO_COLLASSED));
+		table.put("TaskPane.yesCollassed", new ImageIcon(MaterialImages.YES_COLLAPSED));
+		table.put("TaskPane.noCollassed", new ImageIcon(MaterialImages.NO_COLLAPSED));
 
 		table.put("OptionPaneUI.warningIcon", new ImageIcon(MaterialImages.WARNING));
 		table.put("OptionPaneUI.errorIcon", new ImageIcon(MaterialImages.ERROR));
@@ -369,5 +372,13 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put ("FormattedTextField.selectionBackground", MaterialColors.LIGHT_BLUE_400);
 		table.put ("FormattedTextField.selectionForeground", Color.BLACK);
 		table.put("FormattedTextField.border", BorderFactory.createEmptyBorder(3, 5, 2, 5));
+	}
+
+	/**
+	 * This method is used to load additional custom components defaults.
+	 *
+	 * @param table the {@code UIDefaults} to add the values to
+	 */
+	protected void initCustomComponentsDefaults(UIDefaults table) {
 	}
 }

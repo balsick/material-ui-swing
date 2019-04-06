@@ -2,9 +2,7 @@ package mdlaf.components.tabbedpane;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
-import javax.swing.JTabbedPane;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicTabbedPaneUI;
 import java.awt.*;

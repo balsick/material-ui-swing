@@ -1,7 +1,7 @@
 package mdlaf.animation;
 
-import javax.swing.JComponent;
-import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
 
 public class MaterialUIMovement {
 

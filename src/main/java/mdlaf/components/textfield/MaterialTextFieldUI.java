@@ -3,18 +3,10 @@ package mdlaf.components.textfield;
 import mdlaf.utils.MaterialDrawingUtils;
 import mdlaf.utils.MaterialFonts;
 
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.BorderFactory;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicTextFieldUI;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -124,7 +116,8 @@ public class MaterialTextFieldUI extends BasicTextFieldUI implements FocusListen
 			c.setForeground(inactiveForeground);
 			c.setSelectedTextColor(inactiveForeground);
 		}
-		c.paint(c.getGraphics());
+		if (c.getGraphics() != null)
+			c.paint(c.getGraphics());
 	}
 
 	@Override

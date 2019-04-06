@@ -2,9 +2,7 @@ package mdlaf.components.menubar;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
-import javax.swing.JMenuBar;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicMenuBarUI;
 import java.awt.*;

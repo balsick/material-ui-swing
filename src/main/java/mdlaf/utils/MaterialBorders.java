@@ -2,9 +2,9 @@ package mdlaf.utils;
 
 import mdlaf.shadows.DropShadowBorder;
 
-import javax.swing.BorderFactory;
+import javax.swing.*;
 import javax.swing.border.Border;
-import java.awt.Color;
+import java.awt.*;
 
 public class MaterialBorders {
 

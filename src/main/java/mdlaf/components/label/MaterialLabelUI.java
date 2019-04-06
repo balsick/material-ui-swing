@@ -2,12 +2,10 @@ package mdlaf.components.label;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicLabelUI;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MaterialLabelUI extends BasicLabelUI {
 

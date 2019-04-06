@@ -3,57 +3,95 @@ package mdlaf.components.filechooser;
 import mdlaf.utils.MaterialDrawingUtils;
 import mdlaf.utils.MaterialImages;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JFileChooser;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.metal.MetalFileChooserUI;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MaterialFileChooserUI extends MetalFileChooserUI {
 
-	public MaterialFileChooserUI (JFileChooser fileChooser) {
-		super (fileChooser);
-	}
+    public MaterialFileChooserUI(JFileChooser fileChooser) {
+        super(fileChooser);
+    }
 
-	public static ComponentUI createUI (JComponent c) {
-		return new MaterialFileChooserUI ((JFileChooser) c);
-	}
+    public static ComponentUI createUI(JComponent c) {
+        return new MaterialFileChooserUI((JFileChooser) c);
+    }
 
-	@Override
-	public void installUI (JComponent c) {
-		super.installUI (c);
-		JFileChooser fileChooser = (JFileChooser) c;
-		MaterialFileChooserUI ui = (MaterialFileChooserUI) fileChooser.getUI ();
+    @Override
+    public void installUI(JComponent c) {
+        super.installUI(c);
+        JFileChooser fileChooser = (JFileChooser) c;
+        MaterialFileChooserUI ui = (MaterialFileChooserUI) fileChooser.getUI();
 
-		ui.uninstallIcons (fileChooser);
-		ui.uninstallComponents (fileChooser);
-		ui.clearIconCache ();
+        ui.uninstallIcons(fileChooser);
+        ui.uninstallComponents(fileChooser);
+        ui.clearIconCache();
 
-		ui.computerIcon = new ImageIcon (MaterialImages.COMPUTER);
-		ui.directoryIcon = new ImageIcon (MaterialImages.FOLDER);
-		ui.fileIcon = new ImageIcon (MaterialImages.FILE);
-		ui.floppyDriveIcon = new ImageIcon (MaterialImages.FLOPPY_DRIVE);
-		ui.hardDriveIcon = new ImageIcon (MaterialImages.HARD_DRIVE);
+        ui.computerIcon = getComputerIcon();
+        ui.directoryIcon = getDirectoryIcon();
+        ui.fileIcon = getFileIcon();
+        ui.floppyDriveIcon = getFloppyDriveIcon();
+        ui.hardDriveIcon = getHardDriveIcon();
 
-		ui.homeFolderIcon = new ImageIcon (MaterialImages.HOME);
-		ui.listViewIcon = new ImageIcon (MaterialImages.LIST);
-		ui.detailsViewIcon = new ImageIcon (MaterialImages.DETAILS);
-		ui.newFolderIcon = new ImageIcon (MaterialImages.NEW_FOLDER);
-		ui.upFolderIcon = new ImageIcon (MaterialImages.BACK_ARROW);
+        ui.homeFolderIcon = getHomeFolderIcon();
+        ui.listViewIcon = getListViewIcon();
+        ui.detailsViewIcon = getDetailsViewIcon();
+        ui.newFolderIcon = getNewFolderIcon();
+        ui.upFolderIcon = getUpFolderIcon();
 
-		ui.openButtonText = "OPEN";
-		ui.cancelButtonText = "CANCEL";
-		ui.helpButtonText = "HELP";
-		ui.saveButtonText = "SAVE";
-		ui.directoryOpenButtonText = "OPEN";
-		ui.updateButtonText = "UPDATE";
+        ui.openButtonText = "OPEN";
+        ui.cancelButtonText = "CANCEL";
+        ui.helpButtonText = "HELP";
+        ui.saveButtonText = "SAVE";
+        ui.directoryOpenButtonText = "OPEN";
+        ui.updateButtonText = "UPDATE";
 
-		ui.installComponents (fileChooser);
-	}
+        ui.installComponents(fileChooser);
+    }
 
-	@Override
-	public void paint (Graphics g, JComponent c) {
-		super.paint (MaterialDrawingUtils.getAliasedGraphics (g), c);
-	}
+    protected ImageIcon getUpFolderIcon() {
+        return new ImageIcon(MaterialImages.BACK_ARROW);
+    }
+
+    protected ImageIcon getNewFolderIcon() {
+        return new ImageIcon(MaterialImages.NEW_FOLDER);
+    }
+
+    protected ImageIcon getDetailsViewIcon() {
+        return new ImageIcon(MaterialImages.DETAILS);
+    }
+
+    protected ImageIcon getListViewIcon() {
+        return new ImageIcon(MaterialImages.LIST);
+    }
+
+    protected ImageIcon getHomeFolderIcon() {
+        return new ImageIcon(MaterialImages.HOME);
+    }
+
+    protected ImageIcon getHardDriveIcon() {
+        return new ImageIcon(MaterialImages.HARD_DRIVE);
+    }
+
+    protected ImageIcon getFloppyDriveIcon() {
+        return new ImageIcon(MaterialImages.FLOPPY_DRIVE);
+    }
+
+    protected ImageIcon getFileIcon() {
+        return new ImageIcon(MaterialImages.FILE);
+    }
+
+    protected ImageIcon getDirectoryIcon() {
+        return new ImageIcon(MaterialImages.FOLDER);
+    }
+
+    protected ImageIcon getComputerIcon() {
+        return new ImageIcon(MaterialImages.COMPUTER);
+    }
+
+    @Override
+    public void paint(Graphics g, JComponent c) {
+        super.paint(MaterialDrawingUtils.getAliasedGraphics(g), c);
+    }
 }

@@ -1,7 +1,5 @@
 package mdlaf.components.table;
 
-import mdlaf.animation.MaterialUIMovement;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;

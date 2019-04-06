@@ -2,9 +2,7 @@ package mdlaf.components.table;
 
 import mdlaf.components.textfield.MaterialTextFieldUI;
 
-import javax.swing.DefaultCellEditor;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 import java.awt.*;
 
 public class MaterialTableCellEditor extends DefaultCellEditor {

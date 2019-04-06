@@ -2,10 +2,10 @@ package mdlaf.components.separator;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicSeparatorUI;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MaterialSeparatorUI extends BasicSeparatorUI {
 

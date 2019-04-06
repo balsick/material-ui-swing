@@ -1,6 +1,6 @@
 package mdlaf.utils;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class MaterialColors {
 
@@ -247,6 +247,7 @@ public class MaterialColors {
 	public static final Color GRAY_600 = new Color (117, 117, 117);
 	public static final Color GRAY_700 = new Color (97, 97, 97);
 	public static final Color GRAY_800 = new Color (66, 66, 66);
+    public static final Color GRAY_850 = new Color(42, 42, 42);
 	public static final Color GRAY_900 = new Color (33, 33, 33);
 	public static final Color BLUE_GRAY_50 = new Color (236, 239, 241);
 	public static final Color BLUE_GRAY_100 = new Color (207, 216, 220);
@@ -261,7 +262,8 @@ public class MaterialColors {
 	public static final Color BLACK = new Color (0, 0, 0);
 	public static final Color WHITE = new Color (255, 255, 255);
 
-	private MaterialColors () {}
+    private MaterialColors() {
+    }
 
 	public static Color bleach (Color color, float amount) {
 		int red = (int) ((color.getRed () * (1 - amount) / 255 + amount) * 255);

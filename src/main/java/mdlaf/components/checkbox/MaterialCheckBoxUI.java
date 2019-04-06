@@ -2,9 +2,7 @@ package mdlaf.components.checkbox;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JCheckBox;
-import javax.swing.JComponent;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicCheckBoxUI;
 import java.awt.*;

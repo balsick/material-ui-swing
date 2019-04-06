@@ -1,8 +1,8 @@
 package mdlaf.components.menu;
 
 import mdlaf.animation.MaterialUIMovement;
-import mdlaf.utils.MaterialColors;
 import mdlaf.utils.MaterialDrawingUtils;
+
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import javax.swing.plaf.ComponentUI;

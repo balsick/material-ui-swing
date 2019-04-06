@@ -2,14 +2,12 @@ package mdlaf.components.tree;
 
 import mdlaf.utils.MaterialDrawingUtils;
 
-import javax.swing.JComponent;
-import javax.swing.JTree;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicTreeUI;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.TreeCellEditor;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class MaterialTreeUI extends BasicTreeUI {
 
