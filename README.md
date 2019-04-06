@@ -1,4 +1,5 @@
-# material-ui-swing
+# material-ui-swing [![](https://jitpack.io/v/lamba92/material-ui-swing.svg)](https://jitpack.io/#lamba92/material-ui-swing)
+
 A modern, Material Design UI for Java Swing
 
 Skins JComponents to have a Material Design Look and Feel. Most components are responsive, with hover effects, and click effects (no ripple unfortunately). Fonts included.
@@ -51,6 +52,43 @@ public class MaterialUISwingDemo {
 Check `src/main/java/MaterialUISwingDemo.java` for a slightly longer example of how to use this library (and an explanation of what everything means/does).
 For a real-world example of usage, see [here](https://github.com/atarw/washer-chess).
 
+# Install [![](https://jitpack.io/v/lamba92/material-ui-swing.svg)](https://jitpack.io/#lamba92/material-ui-swing)
+Change `LATEST_TAG` with the latest release from Jitpack.io.
+**Maven**:
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+...
+<dependency>
+    <groupId>com.github.lamba92</groupId>
+    <artifactId>material-ui-swing</artifactId>
+    <version>LATEST_TAG</version>
+</dependency>
+```
+**Gradle**:
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile 'com.github.lamba92:material-ui-swing:LATEST_TAG'
+}
+```
+**Gradle Kotlin DSL**:
+```kotlin
+repositories {
+    maven(url="https://jitpack.io")
+}
+
+dependencies {
+    compile("com.github.lamba92","material-ui-swing", "LATEST_TAG")
+}
+```
 # Misc
 
 If there's a component that isn't supported, don't hesitate to open an issue! I can usually code something up for you in a couple of days 😀
