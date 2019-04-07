@@ -1,5 +1,4 @@
-package it.balsick.swing.material.dark;
-
+import it.balsick.swing.material.dark.DarkMaterialLookAndFeel;
 import org.jdesktop.swingx.JXTaskPane;
 
 import java.awt.BorderLayout;
@@ -198,15 +197,7 @@ public class DarkMaterialUISwingDemo
 		editorPane.setText ("This theme is fantastic");
 		pn.add (editorPane);
 
-		JXTaskPane taskPane = new JXTaskPane();
-		taskPane.add(new JLabel("if you see it means that at a certain point \n" +
-				"you do not see yourself anymore"));
-		taskPane.setTitle("Material Look and fell");
-		pn.add(taskPane);
-
-		//Test effect mouse over
-
-		//Setting defoult
+		//Setting default
 		JButton testButtonHoverOne = new JButton("Fly over me One");
 		testButtonHoverOne.setEnabled(false);
 		pn.add(testButtonHoverOne);
