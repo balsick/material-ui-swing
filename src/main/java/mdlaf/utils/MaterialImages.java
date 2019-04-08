@@ -7,10 +7,10 @@ import java.io.InputStream;
 
 public class MaterialImages {
 
-	public static final BufferedImage RIGHT_ARROW = loadImg ("/imgs/right_arrow.png");
-	public static final BufferedImage LEFT_ARROW = loadImg("/imgs/left_arrow.png");
-	public static final BufferedImage DOWN_ARROW = loadImg ("/imgs/down_arrow.png");
-	public static final BufferedImage UP_ARROW = loadImg ("/imgs/up_arrow.png");
+	public static final BufferedImage RIGHT_ARROW = loadImg("/imgs/arrow_right.png");
+	public static final BufferedImage LEFT_ARROW = loadImg("/imgs/arrow_left.png");
+	public static final BufferedImage DOWN_ARROW = loadImg("/imgs/arrow_down.png");
+	public static final BufferedImage UP_ARROW = loadImg("/imgs/arrow_up.png");
 	public static final BufferedImage CHECKED_BOX = loadImg("/imgs/painted_checked_box.png");
 	public static final BufferedImage UNDETERMINED_CHECKED_BOX = loadImg("/imgs/painted_checked_box.png");
 	//	public static final BufferedImage OUTLINED_CHECKED_BOX = loadImg ("/imgs/outlined_checked_box.png");

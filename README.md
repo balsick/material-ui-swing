@@ -62,7 +62,7 @@ Change `LATEST_TAG` with the latest release from Jitpack.io.
     </repository>
 </repositories>
 ```
-```
+```xml
 <dependency>
     <groupId>it.balsick</groupId>
     <artifactId>material-ui-swing</artifactId>

@@ -1,7 +1,6 @@
 package it.balsick.swing.material.dark.utils;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.io.InputStream;
 
 import javax.imageio.ImageIO;
@@ -9,10 +8,10 @@ import javax.imageio.ImageIO;
 public class DarkMaterialImages
 	{
 
-	public static final BufferedImage RIGHT_ARROW = loadImg ("/imgs/right_arrow_w.png");
-	public static final BufferedImage LEFT_ARROW = loadImg ("/imgs/left_arrow_w.png");
-	public static final BufferedImage DOWN_ARROW = loadImg ("/imgs/down_arrow_w.png");
-	public static final BufferedImage UP_ARROW = loadImg ("/imgs/up_arrow_w.png");
+        public static final BufferedImage RIGHT_ARROW = loadImg("/imgs/arrow_right_w.png");
+        public static final BufferedImage LEFT_ARROW = loadImg("/imgs/arrow_left_w.png");
+        public static final BufferedImage DOWN_ARROW = loadImg("/imgs/arrow_down_w.png");
+        public static final BufferedImage UP_ARROW = loadImg("/imgs/arrow_up_w.png");
 	public static final BufferedImage CHECKED_BOX = loadImg ("/imgs/painted_checked_box_w.png");
 	public static final BufferedImage UNDETERMINED_CHECKED_BOX = loadImg ("/imgs/painted_checked_box_w.png");
 	//	public static final BufferedImage OUTLINED_CHECKED_BOX = loadImg ("/imgs/outlined_checked_box_w.png");
@@ -44,8 +43,7 @@ public class DarkMaterialImages
 	private static BufferedImage loadImg (String imgPath) {
 		try (InputStream inputStream = DarkMaterialImages.class.getResourceAsStream (imgPath)) {
 			return ImageIO.read (inputStream);
-		}
-		catch (IOException e) {
+        } catch (Exception e) {
 			e.printStackTrace ();
 			throw new RuntimeException ("Image " + imgPath + " wasn't loaded");
 		}

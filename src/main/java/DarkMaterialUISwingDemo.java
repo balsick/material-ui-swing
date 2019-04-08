@@ -1,51 +1,11 @@
 import it.balsick.swing.material.dark.DarkMaterialLookAndFeel;
-import org.jdesktop.swingx.JXTaskPane;
-
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JColorChooser;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JEditorPane;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JProgressBar;
-import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JScrollPane;
-import javax.swing.JSlider;
-import javax.swing.JSpinner;
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import javax.swing.JToggleButton;
-import javax.swing.JToolBar;
-import javax.swing.JTree;
-import javax.swing.SpinnerDateModel;
-import javax.swing.SpinnerListModel;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-
 import mdlaf.animation.MaterialUIMovement;
 import mdlaf.utils.MaterialColors;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 public class DarkMaterialUISwingDemo
 	{
@@ -225,7 +185,7 @@ public class DarkMaterialUISwingDemo
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message info", "Message info", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message info", "Message info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		buttonInfo.setAction(new InfoMessage());
@@ -245,7 +205,7 @@ public class DarkMaterialUISwingDemo
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message error", "Message error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message error", "Message error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 		buttonError.setAction(new ErrorMassage());
@@ -255,9 +215,9 @@ public class DarkMaterialUISwingDemo
 		JButton buttonQuestion = new JButton();
 		buttonQuestion.setBackground(MaterialColors.BLUE_600);
 		buttonQuestion.addMouseListener(MaterialUIMovement.getMovement(buttonQuestion, MaterialColors.BLUE_300));
-		class QuesuionMessage extends AbstractAction{
+		class QuestionMessage extends AbstractAction {
 
-			public QuesuionMessage() {
+			public QuestionMessage() {
 				putValue(Action.NAME, "Info question panel");
 			}
 
@@ -265,11 +225,11 @@ public class DarkMaterialUISwingDemo
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message question", "Message question", JOptionPane.QUESTION_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message question", "Message question", JOptionPane.QUESTION_MESSAGE);
 			}
 		}
 
-		buttonQuestion.setAction(new QuesuionMessage());
+		buttonQuestion.setAction(new QuestionMessage());
 
 		JButton buttonWarning = new JButton();
 		buttonWarning.setOpaque(false);
@@ -285,7 +245,7 @@ public class DarkMaterialUISwingDemo
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message warning", "Message warning", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message warning", "Message warning", JOptionPane.WARNING_MESSAGE);
 			}
 
 		}

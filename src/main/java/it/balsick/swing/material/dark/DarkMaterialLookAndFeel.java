@@ -31,7 +31,7 @@ public class DarkMaterialLookAndFeel extends MaterialLookAndFeel {
     @Override
     protected void initClassDefaults(UIDefaults table) {
         super.initClassDefaults(table);
-        table.put ("FileChooserUI", fileChooserUI);
+        table.put("FileChooserUI", fileChooserUI);
     }
 
     @Override
@@ -95,6 +95,8 @@ public class DarkMaterialLookAndFeel extends MaterialLookAndFeel {
         table.put("MenuItem.border", BorderFactory.createEmptyBorder(5, 0, 5, 0));
 
         table.put("OptionPane.background", MaterialColors.GRAY_800);
+        table.put("OptionPane.foreground", MaterialColors.WHITE);
+        table.put("OptionPane.messageForeground", MaterialColors.WHITE);
         table.put("OptionPane.border", MaterialBorders.DEFAULT_SHADOW_BORDER);
         table.put("OptionPane.font", MaterialFonts.REGULAR);
 

@@ -1,12 +1,9 @@
 import mdlaf.MaterialLookAndFeel;
 import mdlaf.animation.MaterialUIMovement;
 import mdlaf.utils.MaterialColors;
-import org.jdesktop.swingx.JXTaskPane;
 
 import javax.swing.*;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
@@ -159,12 +156,6 @@ public class MaterialUISwingDemo {
 		editorPane.setText ("This theme is fantastic");
 		pn.add (editorPane);
 
-		JXTaskPane taskPane = new JXTaskPane();
-		taskPane.add(new JLabel("if you see it means that at a certain point \n" +
-				"you do not see yourself anymore"));
-		taskPane.setTitle("Material Look and fell");
-		pn.add(taskPane);
-
 		//Test effect mouse over
 
 		//Setting defoult
@@ -195,7 +186,7 @@ public class MaterialUISwingDemo {
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message info", "Message info", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message info", "Message info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		buttonInfo.setAction(new InfoMessage());
@@ -215,7 +206,7 @@ public class MaterialUISwingDemo {
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message error", "Message error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message error", "Message error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 		buttonError.setAction(new ErrorMassage());
@@ -235,7 +226,7 @@ public class MaterialUISwingDemo {
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message question", "Message question", JOptionPane.QUESTION_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message question", "Message question", JOptionPane.QUESTION_MESSAGE);
 			}
 		}
 
@@ -255,7 +246,7 @@ public class MaterialUISwingDemo {
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane optionPane = new JOptionPane();
-				optionPane.showMessageDialog(frame, "This is message warning", "Message warning", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "This is message warning", "Message warning", JOptionPane.WARNING_MESSAGE);
 			}
 
 		}
