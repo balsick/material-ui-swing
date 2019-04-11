@@ -6,6 +6,7 @@ import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicTableUI;
 import java.awt.*;
+import java.util.Optional;
 
 public class MaterialTableUI extends BasicTableUI {
 
@@ -25,6 +26,8 @@ public class MaterialTableUI extends BasicTableUI {
         table.setBorder(UIManager.getBorder("Table.border"));
         table.setGridColor(UIManager.getColor("Table.gridColor"));
         table.setSelectionBackground(UIManager.getColor("Table.selectionBackground"));
+        table.setShowVerticalLines(Optional.ofNullable((Boolean) UIManager.get("Table.showVerticalLines")).orElse(table.getShowVerticalLines()));
+        table.setShowHorizontalLines(Optional.ofNullable((Boolean) UIManager.get("Table.showHorizontalLines")).orElse(table.getShowHorizontalLines()));
 
         table.getTableHeader().setResizingAllowed(true);
         int rowHeight = UIManager.getInt("Table.rowHeight");

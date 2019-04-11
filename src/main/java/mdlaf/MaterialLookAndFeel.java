@@ -99,6 +99,16 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
     }
 
     @Override
+    public UIDefaults getDefaults() {
+        UIDefaults table = new UIDefaults(610, 0.75f);
+
+        initClassDefaults(table);
+        initSystemColorDefaults(table);
+        initComponentDefaults(table);
+
+        return table;
+    }
+    @Override
     protected void initClassDefaults(UIDefaults table) {
         super.initClassDefaults(table);
         table.put("ButtonUI", buttonUI);

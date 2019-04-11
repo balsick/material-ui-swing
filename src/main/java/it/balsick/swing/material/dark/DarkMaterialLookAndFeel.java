@@ -166,6 +166,7 @@ public class DarkMaterialLookAndFeel extends MaterialLookAndFeel {
         table.put("Table.font", MaterialFonts.REGULAR);
         table.put("Table.border", DarkMaterialBorders.DARK_LINE_BORDER);
         table.put("Table.gridColor", new Color(0, 0, 0, 0));
+        table.put("Table.showVerticalLines", Boolean.FALSE);
 
         table.put("TableHeader.background", MaterialColors.GRAY_850);
         table.put("TableHeader.foreground", MaterialColors.WHITE);
@@ -271,6 +272,8 @@ public class DarkMaterialLookAndFeel extends MaterialLookAndFeel {
         table.put("FormattedTextField.selectionBackground", MaterialColors.LIGHT_BLUE_600);
         table.put("FormattedTextField.selectionForeground", MaterialColors.WHITE);
         table.put("FormattedTextField.border", BorderFactory.createEmptyBorder(3, 5, 2, 5));
+
+        table.put("Viewport.background", MaterialColors.GRAY_800);
 
         initCustomComponentsDefaults(table);
     }
